@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Компьютерын ухаан | Codercub</title>
+<meta name="description" content="Codercub — Advancing computer science in Mongolia. 2018 оноос хойш багш бэлтгэл, K-12 сурагчдын хөтөлбөр, Carnegie Mellon-тэй хамтарсан AI/CS замнал.">
+<link rel="canonical" href="https://computerscience.mn/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Компьютерын ухаан | Codercub">
+<meta property="og:locale" content="mn_MN">
+<meta property="og:title" content="Компьютерын ухаан | Codercub">
+<meta property="og:description" content="Codercub — Advancing computer science in Mongolia. 2018 оноос хойш багш бэлтгэл, K-12 сурагчдын хөтөлбөр, Carnegie Mellon-тэй хамтарсан AI/CS замнал.">
+<meta property="og:url" content="https://computerscience.mn/">
+<meta property="og:image" content="https://computerscience.mn/assets/images/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Компьютерын ухаан | Codercub">
+<meta name="twitter:description" content="Codercub — Advancing computer science in Mongolia. 2018 оноос хойш багш бэлтгэл, K-12 сурагчдын хөтөлбөр, Carnegie Mellon-тэй хамтарсан AI/CS замнал.">
+<meta name="twitter:image" content="https://computerscience.mn/assets/images/og-image.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="icon" href="favicon.ico" sizes="48x48">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/images/icon-192.png">
+<link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+</head>
+<body>
+
+<div class="announce" id="announce" role="region" aria-label="Мэдэгдэл">
+  <div class="wrap">
+    <span class="announce-tag">Удахгүй</span>
+    <a href="hourofai/"><b>Hour of AI</b> — нэг цагийн AI танилцуулга <span>→</span></a>
+    <span class="announce-sep"></span>
+    <a href="programs/#faq"><b>CS1</b> — дараагийн элсэлт 2027.09.14 <span>→</span></a>
+    <button class="announce-close" id="announceClose" type="button" aria-label="Хаах">&times;</button>
+  </div>
+</div>
+<script>
+(function(){var el=document.getElementById('announce');try{if(localStorage.getItem('csmn-announce')==='closed'){el.hidden=true;}}catch(e){}
+document.getElementById('announceClose').addEventListener('click',function(){el.hidden=true;try{localStorage.setItem('csmn-announce','closed');}catch(e){}});})();
+</script>
+
+<header>
+  <nav>
+    <a href="./" class="brand"><span class="brand-text"><span class="brand-title">КОМПЬЮТЕРЫН УХААН</span><span class="brand-sub">Powered by Codercub</span></span></a>
+    <div class="navlinks" id="navlinks">
+      <div class="links">
+        <a class="link" href="about/">About</a>
+        <a class="link" href="programs/">Хөтөлбөрүүд</a>
+        <a class="link" href="pd/">Багшийн хөгжил</a>
+        <a class="link" href="hourofai/">Hour of AI</a>
+      </div>
+      <a class="nav-cta" href="https://forms.gle/cnZujGwkgW9X5nVN7" target="_blank" rel="noopener">Бүртгүүлэх →</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Цэс" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero border-b" aria-roledescription="carousel" aria-label="Codercub">
+  <div class="hero-slides">
+
+    <div class="hero-slide is-active" aria-roledescription="slide" aria-label="1 / 2">
+      <div class="hero-bg">
+        <img src="assets/images/orgil-student.jpg" alt="Codercub сурагч">
+      </div>
+      <div class="wrap hero-grid2">
+        <div class="hero-inner">
+          <div class="hero-tag"><span class="dot"></span>Since 2018 // @codercub</div>
+          <h1>Advancing computer science in Mongolia.</h1>
+          <p class="lede">Компьютерын ухаан ба кодчлолын Америк хөтөлбөрүүдийг Монгол сурагчдад - 2018 оноос хойш.</p>
+          <div class="hero-ctas hero-ctas--stack">
+            <a class="btn-primary" href="programs/">Хөтөлбөрүүдтэй танилцах →</a>
+            <a class="btn-orange" href="about/">Бидний тухай</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-slide hero-slide--split hero-slide--right" aria-roledescription="slide" aria-label="2 / 2">
+      <div class="hero-bg">
+        <img src="assets/images/fil-thumb.jpg" alt="Future Intelligence Lab — Simon Guest хичээл зааж буй нь">
+      </div>
+      <div class="wrap hero-grid2">
+        <div class="hero-inner">
+          <div class="hero-tag"><span class="dot"></span>Future Intelligence Lab // Python &amp; AI</div>
+          <h1>Future Intelligence Lab with Simon Guest.</h1>
+          <p class="lede">Python мэддэг ахлах ангийн сурагч, залуучуудад зориулсан жилийн AI хөтөлбөр — Data Science-с Generative AI хүртэл. Amazon, Microsoft-д ажиллаж байсан Simon Guest багшилдаг.</p>
+          <div class="hero-ctas">
+            <a class="btn-primary" href="future/">Хөтөлбөрийн тухай →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="hero-controls">
+    <div class="wrap">
+      <div class="hero-dots" role="tablist" aria-label="Слайд сонгох">
+        <button class="hero-dot is-active" role="tab" aria-label="Слайд 1"></button>
+        <button class="hero-dot" role="tab" aria-label="Слайд 2"></button>
+      </div>
+      <div class="hero-arrows">
+        <button class="hero-arrow" id="heroPrev" aria-label="Өмнөх">←</button>
+        <button class="hero-arrow" id="heroNext" aria-label="Дараах">→</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats-strip section-soft border-b" style="padding:0;">
+  <div class="stats-grid">
+    <div class="stat-item">
+      <div class="stat-num">1200+<small> сурагч</small></div>
+      <div class="stat-label">2018 оноос хойш хичээл заасан</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">100+<small> багш</small></div>
+      <div class="stat-label">сургалтад хамруулсан</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">53<small> сурагч</small></div>
+      <div class="stat-label">CS1 хөтөлбөр төгссөн · 2025–26 хичээлийн жил</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">5<small> сурагч</small></div>
+      <div class="stat-label">АНУ-д зохиогддог Creative Task Challenge кодинг олимпиадад байр эзэлсэн</div>
+    </div>
+  </div>
+</section>
+
+<!-- QUOTES -->
+<section class="border-b">
+  <div class="wrap">
+    <div class="eyebrow">Сэтгэгдэл</div>
+    <h2 class="reveal">Сурагч, эцэг эхчүүд юу гэж хэлдэг вэ.</h2>
+    <div class="test-grid test-grid--3">
+      <div class="test-card reveal"><span class="test-quote-mark">“</span>
+        <p>Codercub-т суугаад coding дөнгөж эхэлж байгаа миний хувьд үр дүнтэй 3 долоо хоног өнгөрлөө. Хичээлүүд ойлгомжтой, заавар сайн байсан. Англи хэл дээр явагдсан нь бүр их давуу тал, үр өгөөжтэй юм байна лээ.</p>
+        <div class="test-attr"><b>Ринчиндулам</b><span>50-р сургуулийн сурагч</span></div></div>
+      <div class="test-card reveal"><span class="test-quote-mark">“</span>
+        <p>Codercub-ийн хичээл нь Америкийн Carnegie Mellon их сургуулийн боловсруулсан хөтөлбөрөөр орж байгаа болохоор шат шатны сургалтад хамрагдаад дараа нь тэр сургуульдаа шалгалт өгөөд кредит тооцуулах боломжтой гэсэн.</p>
+        <div class="test-attr"><b>Энэбиш</b><span>Анарын аав</span></div></div>
+      <div class="test-card reveal"><span class="test-quote-mark">“</span>
+        <p>Энэ их сайн багштай, сайн сургалттай газар шүү. Манай хүү бараг бүх шатны сургалтанд суугаад их баяртай байгаа. Хичээл нь дандаа сонирхолтой байсан гэж ирдэг.</p>
+        <div class="test-attr"><b>Цолмон</b><span>Оргилын ээж</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- TEASERS -->
+<section class="section-soft border-b">
+  <div class="wrap">
+    <div class="teaser-grid">
+      <a class="teaser-card reveal" href="pd/">
+        <div class="teaser-img"><img src="assets/images/teacher-group.jpg" alt="Багш нар сургалтанд хамрагдаж буй нь" loading="lazy"></div>
+        <div class="teaser-body">
+          <div class="eyebrow">Багшийн хөгжил</div>
+          <h3>Монголын багш нарыг компьютерын ухаанд бэлтгэж байна.</h3>
+          <span class="go">Дэлгэрэнгүй →</span>
+        </div>
+      </a>
+      <a class="teaser-card reveal" href="hourofai/">
+        <div class="teaser-img"><img src="assets/images/kids-coding.jpg" alt="Хүүхдүүд кодчилж буй нь" loading="lazy"></div>
+        <div class="teaser-body">
+          <div class="eyebrow">Hour of AI</div>
+          <h3>Хүн бүрт зориулсан нэг цагийн AI танилцуулга.</h3>
+          <span class="go">Тун удахгүй →</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- PARTNERS -->
+<section class="partners-logos border-b">
+  <div class="wrap">
+    <div class="eyebrow center" style="justify-content:center;">Америкийн түншүүд</div>
+    <div class="partner-logos">
+      <img class="pl pl-codeai" src="assets/images/partner-codeai.png" alt="CodeAI (formerly Code.org)">
+      <img class="pl pl-cmu" src="assets/images/partner-cmu-cs.png" alt="Carnegie Mellon University Computer Science Academy">
+      <img class="pl pl-bootup" src="assets/images/partner-bootup.png" alt="BootUp Professional Development">
+      <img class="pl pl-scratch" src="assets/images/partner-scratch.png" alt="Scratch Foundation">
+      <img class="pl pl-devtech" src="assets/images/partner-devtech.png" alt="DevTech Research Group, Boston College">
+    </div>
+  </div>
+</section>
+
+<!-- BLOG -->
+<section id="blog" class="section-soft border-b">
+  <div class="wrap">
+    <div class="eyebrow">Блог</div>
+    <h2 class="reveal">Бидний бичсэн нийтлэлүүд.</h2>
+    <p class="lede reveal">Код, технологи, компьютерын ухааны боловсролын тухай Codercub-ийн Medium блогоос.</p>
+    <div class="blog-grid">
+      <a class="blog-card reveal" href="https://codercub.medium.com/chatgpt-%D1%82%D1%8D%D0%B9-%D0%BA%D0%BE%D0%B4-%D0%B1%D0%B8%D1%87%D1%81%D1%8D%D0%BD-%D1%82%D1%8D%D0%BC%D0%B4%D1%8D%D0%B3%D0%BB%D1%8D%D0%BB-d4b1056613aa" target="_blank" rel="noopener">
+        <div class="blog-thumb"><img src="https://miro.medium.com/v2/resize:fill:640:428/1*ApFLhj5WTVJ04tPHtpUKaw.png" alt="" loading="lazy" referrerpolicy="no-referrer"></div>
+        <div class="blog-body">
+          <span class="blog-date">2025.01.07</span>
+          <h3>ChatGPT-тэй код бичсэн тэмдэглэл</h3>
+          <p>Нөгөө бацаан чинь мэдээлэл зүйн бодлого бодоод бүүр Монголоор их сайн ойлгоод…</p>
+          <span class="go">Medium дээр унших →</span>
+        </div>
+      </a>
+      <a class="blog-card reveal" href="https://codercub.medium.com/five-questions-oracle-%D1%8B%D0%BD-%D0%B6%D0%B0%D0%BC%D0%B0-75f863d1ccaf" target="_blank" rel="noopener">
+        <div class="blog-thumb"><img src="https://miro.medium.com/v2/resize:fill:640:428/1*zUA6bmvGr4gXsKm_Jwdm0g.png" alt="" loading="lazy" referrerpolicy="no-referrer"></div>
+        <div class="blog-body">
+          <span class="blog-date">2024.01.11</span>
+          <h3>Five Questions: Oracle-ын Жама Технологийн манлайлагчидтай ярилцах</h3>
+          <p>Five Questions буландаа энэ удаа Microsoft, Oracle зэрэг АНУ-ын томоохон компаниудад програм хангамжийн…</p>
+          <span class="go">Medium дээр унших →</span>
+        </div>
+      </a>
+      <a class="blog-card reveal" href="https://codercub.medium.com/five-questions-ibm-%D1%8B%D0%BD-%D0%B1%D0%B0%D0%B0%D1%81%D0%B0%D0%BD%D0%B4%D0%BE%D1%80%D0%B6-dd27de7f4bd8" target="_blank" rel="noopener">
+        <div class="blog-thumb"><img src="https://miro.medium.com/v2/resize:fill:640:428/0*WPqZ-WjcR3MK8sMw.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"></div>
+        <div class="blog-body">
+          <span class="blog-date">2023.12.26</span>
+          <h3>Five Questions: IBM-ын Баасандорж Технологийн манлайлагчидтай ярилцах</h3>
+          <p>Five Questions булангийн анхны зочноор IBM, Enterprise зэрэг АНУ-ын томоохон компаниудад мэдээллийн…</p>
+          <span class="go">Medium дээр унших →</span>
+        </div>
+      </a>
+      <a class="blog-card reveal" href="https://codercub.medium.com/computer-science-in-rural-mongolia-375ba90dedb" target="_blank" rel="noopener">
+        <div class="blog-thumb"><img src="https://miro.medium.com/v2/resize:fill:640:428/1*zndX163RKH1kfxgL7gy_PQ.jpeg" alt="" loading="lazy" referrerpolicy="no-referrer"></div>
+        <div class="blog-body">
+          <span class="blog-date">2023.03.21</span>
+          <h3>Computer Science in Rural Mongolia</h3>
+          <p>Think of the great steppes of Central Asia and you are not likely to have IT in the picture.</p>
+          <span class="go">Medium дээр унших →</span>
+        </div>
+      </a>
+      <a class="blog-card reveal" href="https://codercub.medium.com/%D0%BA%D0%BE%D0%B4-%D1%81%D1%83%D1%80%D0%B0%D1%85%D1%8B%D0%BD-%D0%B0%D1%87-%D1%85%D0%BE%D0%BB%D0%B1%D0%BE%D0%B3%D0%B4%D0%BE%D0%BB-8b0326469de" target="_blank" rel="noopener">
+        <div class="blog-thumb"><img src="https://miro.medium.com/v2/resize:fill:640:428/1*F0hZ9WkAZxVxjwAS_RzTJQ.png" alt="" loading="lazy" referrerpolicy="no-referrer"></div>
+        <div class="blog-body">
+          <span class="blog-date">2020.05.31</span>
+          <h3>Код сурахын ач холбогдол</h3>
+          <p>Хүүхэд компьютер програмчилж сурах уу? Энэ асуултыг эцэг эхчүүд тавих нь олон.</p>
+          <span class="go">Medium дээр унших →</span>
+        </div>
+      </a>
+      <a class="blog-card reveal" href="https://codercub.medium.com/%D0%BA%D0%BE%D0%B4-%D0%B3%D1%8D%D0%B6-%D1%8E%D1%83-%D0%B2%D1%8D-ac2ae2b53aa7" target="_blank" rel="noopener">
+        <div class="blog-thumb"><img src="https://miro.medium.com/v2/resize:fill:640:428/1*IjIYfN3DtmtTba2gSxMnEA.png" alt="" loading="lazy" referrerpolicy="no-referrer"></div>
+        <div class="blog-body">
+          <span class="blog-date">2018.05.23</span>
+          <h3>Код гэж юу вэ?</h3>
+          <p>Аж үйлдвэрийн дөрөвдүгээр хувьсгал хийгээд бидний аж төрж буй цахим эринг компьютергүйгээр төсөөлөх аргагүй бөгөөд…</p>
+          <span class="go">Medium дээр унших →</span>
+        </div>
+      </a>
+    </div>
+    <p style="margin-top:28px;"><a class="btn-primary reveal" href="https://codercub.medium.com/" target="_blank" rel="noopener">Бүх нийтлэл →</a></p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer-row">
+    <a class="footer-logo" href="./" aria-label="Codercub"><img src="assets/images/codercub-logo-white.png" alt="Codercub" width="156" height="34"></a>
+    <div class="footer-contact">
+      <span>EduPark 207 тоот, Хан-Уул 15-р хороо, Улаанбаатар</span>
+      <a href="tel:+97672204455">7220-4455</a>
+      <a href="mailto:info@computerscience.mn">info@computerscience.mn</a>
+    </div>
+    <div class="footer-social">
+      <a href="https://www.facebook.com/codercub" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a9 9 0 0 1 1.141.195v3.325a9 9 0 0 0-.653-.036 27 27 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.7 1.7 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647"/></svg></a>
+      <a href="https://medium.com/@codercub" target="_blank" rel="noopener" aria-label="Medium" title="Medium"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"/></svg></a>
+      <a href="https://www.linkedin.com/company/codercub/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn"><svg viewBox="0 0 448 512" fill="currentColor" aria-hidden="true"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77m282.1 320h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg></a>
+      <a href="https://www.youtube.com/@codercub" target="_blank" rel="noopener" aria-label="YouTube" title="YouTube"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.02 3.02 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.02 3.02 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.02 3.02 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.02 3.02 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814M9.545 15.568V8.432L15.818 12z"/></svg></a>
+    </div>
+  </div>
+  <div class="wrap"><div class="footer-bottom"><span>© <span id="year">2026</span> Codercub</span><span class="footer-badge"><img src="assets/images/hour-of-ai-partner.png" alt="Hour of AI — Official Partner" width="72" height="72" loading="lazy"></span></div></div>
+</footer>
+
+<script src="assets/js/script.js"></script>
+</body>
+</html>
