@@ -451,7 +451,7 @@ footer{ padding:28px 0; }
   position:relative; padding:96px 0 88px; color:#fff; overflow:hidden;
   background:
     linear-gradient(135deg, rgba(130,85,241,.88) 0%, rgba(57,59,229,.84) 55%, rgba(13,36,134,.9) 100%),
-    url('../images/about-banner.jpg') center 22%/cover no-repeat;
+    url('../images/about-banner-wide.jpg') center/cover no-repeat;
 }
 .about-banner .eyebrow{ color:var(--orange); }
 .about-banner h1{ font-size:44px; line-height:1.1; color:#fff; background:none; -webkit-text-fill-color:#fff; margin-bottom:16px; }
@@ -712,7 +712,7 @@ a.photo-card:hover .pc-go{ color:var(--orange); border-color:var(--orange); }
 .founder-sign b{ font-family:var(--serif); font-size:19px; font-weight:600; }
 .founder-sign span:last-child{ flex-basis:100%; padding-left:26px; font-size:13px; color:var(--text-faint); }
 
-.about-banner--teachers{padding:96px 0 88px;background:linear-gradient(100deg,rgba(57,59,229,.86) 0%,rgba(57,59,229,.62) 42%,rgba(13,36,134,.22) 100%),url('../images/teachers-hero.jpg') center 36%/cover no-repeat;}
+.about-banner--teachers{padding:96px 0 88px;background:linear-gradient(100deg,rgba(57,59,229,.86) 0%,rgba(57,59,229,.62) 42%,rgba(13,36,134,.22) 100%),url('../images/teachers-hero-wide.jpg') center/cover no-repeat;}
 .about-banner--teachers h1{max-width:520px;font-size:40px}
 .about-banner--teachers .lede{max-width:500px;font-size:17px}
 @media(max-width:700px){.about-banner--teachers{padding:96px 0 88px;background-position:60% 36%}.about-banner--teachers h1{font-size:30px}}
@@ -729,7 +729,7 @@ footer .footer-bottom{display:flex;align-items:center;justify-content:space-betw
 .footer-badge{display:block;flex:none;line-height:0}
 .footer-badge img{width:72px;height:72px;display:block;transition:transform .2s}
 
-.about-banner--hoai{padding:96px 0 88px;background:linear-gradient(100deg,rgba(57,59,229,.9) 0%,rgba(57,59,229,.68) 45%,rgba(13,36,134,.3) 100%),url('../images/hourofai-hero.jpg') center 22%/cover no-repeat;}
+.about-banner--hoai{padding:96px 0 88px;background:linear-gradient(100deg,rgba(57,59,229,.9) 0%,rgba(57,59,229,.68) 45%,rgba(13,36,134,.3) 100%),url('../images/hourofai-hero-wide.jpg') center/cover no-repeat;}
 .about-banner--hoai h1{max-width:560px;font-size:44px}
 .about-banner--hoai .lede{max-width:520px;font-size:18px}
 .hoai-logo--inline{max-width:300px;margin:0 0 28px;display:block}
@@ -744,3 +744,10 @@ footer .footer-bottom{display:flex;align-items:center;justify-content:space-betw
 @media(max-width:700px){.hoai-title img{width:260px}}
 
 .hoai-graphic{display:block;width:100%;height:auto;border-radius:var(--radius);box-shadow:0 14px 40px rgba(13,36,134,.16)}
+
+/* mobile: lighter, uncropped banner photos (keeps the original framing) */
+@media(max-width:700px){
+  .about-banner:not([class*="--"]){background-image:linear-gradient(135deg, rgba(130,85,241,.88) 0%, rgba(57,59,229,.84) 55%, rgba(13,36,134,.9) 100%),url('../images/about-banner-m.jpg');background-position:center,center 22%;background-size:auto,cover;}
+  .about-banner--teachers{background-image:linear-gradient(100deg,rgba(57,59,229,.86) 0%,rgba(57,59,229,.62) 42%,rgba(13,36,134,.22) 100%),url('../images/teachers-hero-m.jpg');background-position:center,60% 36%;background-size:auto,cover;}
+  .about-banner--hoai{background-image:linear-gradient(100deg,rgba(57,59,229,.9) 0%,rgba(57,59,229,.68) 45%,rgba(13,36,134,.3) 100%),url('../images/hourofai-hero-m.jpg');background-position:center,35% 22%;background-size:auto,cover;}
+}
