@@ -778,3 +778,5 @@ footer .footer-bottom{display:flex;align-items:center;justify-content:space-betw
 .cta .lede{ color:#3d2a12; }
 .cta .btn-primary{ background:var(--navy); color:#fff; box-shadow:0 8px 22px rgba(13,36,134,.28); }
 .cta .btn-primary:hover{ background:#091a66; }
+.wk-week{display:flex;flex-direction:column;gap:3px}
+.wk-dates{font-size:14px;font-weight:600;letter-spacing:0;text-transform:none;color:var(--text-dim)}
