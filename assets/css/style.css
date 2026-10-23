@@ -769,3 +769,12 @@ footer .footer-bottom{display:flex;align-items:center;justify-content:space-betw
 .wk-ex{margin:14px 0 0;font-size:13.5px;color:var(--text-faint)}
 .wk-ex b{color:var(--text-dim)}
 @media(max-width:760px){.wk-grid{grid-template-columns:1fr}.wk-card{padding:22px 20px 18px}}
+
+/* Registration CTA band: brand orange */
+.cta{ background:linear-gradient(120deg,#ffb020 0%,#ff9900 45%,#ff7a1a 100%); color:var(--text); border-top:0; }
+.cta .eyebrow{ color:#5a2d00; }
+.cta .eyebrow::before{ background:#5a2d00; }
+.cta h2{ color:#1a1033; }
+.cta .lede{ color:#3d2a12; }
+.cta .btn-primary{ background:var(--navy); color:#fff; box-shadow:0 8px 22px rgba(13,36,134,.28); }
+.cta .btn-primary:hover{ background:#091a66; }
