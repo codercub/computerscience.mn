@@ -794,3 +794,7 @@ footer .footer-bottom{display:flex;align-items:center;justify-content:space-betw
 .prog-photos--1 .photo-card img{ object-position:center 30%; }
 @media (max-width:860px){ .prog-photos--2{ grid-template-columns:1fr 1fr; } .prog-photos--2 .photo-card:last-child{ grid-column:span 1; } .prog-photos--1{ grid-template-columns:1fr; } .prog-photos--1 .photo-card:last-child{ grid-column:span 1; } }
 @media (max-width:560px){ .prog-photos--2{ grid-template-columns:1fr; } }
+
+/* active promo price card */
+.price-card.promo::before{ content:'11 САРЫН ДУУСТАЛ'; position:absolute; top:-11px; left:20px; background:var(--orange); color:#fff; font-size:10px; font-weight:700; letter-spacing:.05em; padding:3px 9px; border-radius:20px; }
+.price-card.promo{ border-color:var(--orange); }
