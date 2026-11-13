@@ -824,3 +824,8 @@ footer .footer-bottom{display:flex;align-items:center;justify-content:space-betw
 .reg-done[hidden], .reg-form[hidden], .fld[hidden], .fld-hint[hidden]{ display:none !important; }
 .reg-check{ width:64px; height:64px; margin:0 auto 18px; border-radius:50%; background:#e6f7ee; color:#1a9b5b; font-size:34px; display:flex; align-items:center; justify-content:center; }
 @media (max-width:620px){ .fld-row{ flex-direction:column; gap:0; } .reg-form fieldset{ padding:18px 16px 4px; } }
+
+/* slim banner (registration) */
+.about-banner--slim{ padding:44px 0 40px; background:linear-gradient(135deg, var(--purple) 0%, var(--blue) 55%, var(--navy) 100%); }
+.about-banner--slim h1{ font-size:36px; margin:0; }
+@media (max-width:640px){ .about-banner--slim{ padding:32px 0 28px; } .about-banner--slim h1{ font-size:30px; } }
