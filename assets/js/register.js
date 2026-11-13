@@ -1,6 +1,6 @@
 (function () {
   // Paste the Apps Script Web App URL here (see apps-script/README.md).
-  var ENDPOINT = 'https://script.google.com/macros/s/AKfycby7AMZ60HB1lFD7w1M7Lm6l6yFzE4YPN5Rwp5_aFqa11Ob4WUecBmJRIBDfUn9TbeYe/exec';
+  var ENDPOINT = 'https://script.google.com/macros/s/AKfycbyCijGiCyyLuGVvm45oJZDMvshhbN6r60zndLB5xOsW_NYUPOp3bGZWYSNd3mAl67_SBQ/exec';
   var FIELDS = ['program','first','last','gender','phone','email','school','grade','place','note','consent'];
 
   var form = document.getElementById('regForm');
@@ -39,9 +39,31 @@
   }
 
   function finish() {
+    var ref = document.getElementById('payRef');
+    if (ref) {
+      var nm = (form.elements['last'].value + ' ' + form.elements['first'].value).trim();
+      var pr = program.options[program.selectedIndex];
+      ref.textContent = nm + (pr && pr.getAttribute('data-key') ? ' — ' + pr.text.split(' · ')[0] : '');
+    }
     form.hidden = true; done.hidden = false;
     window.scrollTo({ top: done.getBoundingClientRect().top + window.scrollY - 120, behavior: 'smooth' });
   }
+
+  var copyBtn = document.getElementById('copyAcct');
+  if (copyBtn) copyBtn.addEventListener('click', function () {
+    var text = document.getElementById('payAcct').textContent.trim();
+    function ok() {
+      copyBtn.textContent = 'Хууллаа ✓'; copyBtn.classList.add('done');
+      setTimeout(function () { copyBtn.textContent = 'Хуулах'; copyBtn.classList.remove('done'); }, 2200);
+    }
+    function legacy() {
+      var ta = document.createElement('textarea'); ta.value = text; ta.setAttribute('readonly', '');
+      ta.style.position = 'fixed'; ta.style.opacity = '0'; document.body.appendChild(ta); ta.select();
+      try { document.execCommand('copy'); ok(); } catch (e) {}
+      document.body.removeChild(ta);
+    }
+    if (navigator.clipboard && window.isSecureContext) navigator.clipboard.writeText(text).then(ok, legacy); else legacy();
+  });
 
   form.addEventListener('submit', function (e) {
     e.preventDefault();
@@ -57,15 +79,19 @@
     });
     d.append('page', location.href);
 
+    function fail(code, detail) {
+      try { console.error('[register]', code, detail || ''); } catch (x) {}
+      btn.disabled = false;
+      setStatus('Илгээж чадсангүй (код: ' + code + '). Дахин оролдох эсвэл 7220-4455 руу залгана уу.', true);
+    }
+
     fetch(ENDPOINT, { method: 'POST', body: d })
-      .then(function (r) { return r.text(); })
-      .then(function (t) {
-        if (t.trim() !== 'ok') throw new Error('bad response');
-        finish();
+      .then(function (r) {
+        return r.text().then(function (t) {
+          if (t.trim() === 'ok') return finish();
+          fail('script-' + r.status, t.slice(0, 200));
+        });
       })
-      .catch(function () {
-        btn.disabled = false;
-        setStatus('Илгээж чадсангүй. Дахин оролдох эсвэл 7220-4455 руу залгана уу.', true);
-      });
+      .catch(function (err) { fail('network', err && err.message); });
   });
 })();

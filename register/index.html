@@ -22,7 +22,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/style.css?v=16">
+<link rel="stylesheet" href="../assets/css/style.css?v=17">
 <link rel="icon" href="../favicon.ico" sizes="48x48">
 <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32.png">
 <link rel="icon" type="image/png" sizes="192x192" href="../assets/images/icon-192.png">
@@ -122,6 +122,17 @@
       <div class="reg-check">✓</div>
       <h2>Бүртгэл илгээгдлээ.</h2>
       <p class="lede">Баярлалаа! Бид таны оруулсан утас болон и-мэйлээр удахгүй холбогдоно. Яаралтай бол <a href="tel:+97672204455">7220-4455</a> дугаарт залгаарай.</p>
+      <div class="pay-card">
+        <h3>Төлбөр шилжүүлэх</h3>
+        <p class="pay-note">Суудал таны төлбөр орсны дараа баталгаажна.</p>
+        <dl class="pay-rows">
+          <div><dt>Банк</dt><dd>Хаан банк</dd></div>
+          <div><dt>Дансны дугаар</dt><dd><span class="pay-acct" id="payAcct">MN46 0005 00 5037678658</span>
+            <button type="button" class="copy-btn" id="copyAcct" aria-label="Дансны дугаар хуулах">Хуулах</button></dd></div>
+          <div><dt>Хүлээн авагч</dt><dd>М.Золбаяр</dd></div>
+          <div><dt>Гүйлгээний утга</dt><dd id="payRef">Сурагчийн овог, нэр</dd></div>
+        </dl>
+      </div>
       <p><a class="btn-primary" href="../programs/">Хөтөлбөрүүд рүү буцах</a></p>
     </div>
   </div>
@@ -146,6 +157,6 @@
 </footer>
 
 <script src="../assets/js/script.js?v=3"></script>
-<script src="../assets/js/register.js?v=3"></script>
+<script src="../assets/js/register.js?v=6"></script>
 </body>
 </html>
