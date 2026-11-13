@@ -798,3 +798,29 @@ footer .footer-bottom{display:flex;align-items:center;justify-content:space-betw
 /* active promo price card */
 .price-card.promo::before{ content:'11 САРЫН ДУУСТАЛ'; position:absolute; top:-11px; left:20px; background:var(--orange); color:#fff; font-size:10px; font-weight:700; letter-spacing:.05em; padding:3px 9px; border-radius:20px; }
 .price-card.promo{ border-color:var(--orange); }
+
+/* registration page */
+.reg-form{ max-width:760px; margin:0 auto; display:flex; flex-direction:column; gap:22px; }
+.reg-form fieldset{ border:1px solid var(--line); border-radius:16px; padding:22px 24px 8px; margin:0; background:#fff; min-width:0; }
+.reg-form legend{ font-family:var(--serif); font-size:19px; font-weight:600; padding:0 8px; color:var(--navy); }
+.fld{ display:flex; flex-direction:column; gap:6px; margin-bottom:16px; min-width:0; flex:1; }
+.fld > span{ font-size:14px; font-weight:600; color:var(--text); }
+.fld b{ color:var(--orange); }
+.fld input, .fld select, .fld textarea{ font:inherit; font-size:16px; color:var(--text); background:#fff; border:1px solid var(--line); border-radius:10px; padding:11px 13px; width:100%; min-width:0; }
+.fld textarea{ resize:vertical; }
+.fld input:focus, .fld select:focus, .fld textarea:focus{ outline:none; border-color:var(--purple); box-shadow:0 0 0 3px rgba(130,85,241,.15); }
+.fld-row{ display:flex; gap:16px; }
+.fld-hint{ background:var(--blue-softer); border:1px solid var(--blue-soft); color:var(--navy); border-radius:10px; padding:10px 14px; font-size:14px; margin:-4px 0 16px; }
+.consent{ display:flex; gap:10px; align-items:flex-start; font-size:14px; color:var(--text-dim); }
+.consent input{ margin-top:4px; width:18px; height:18px; accent-color:var(--purple); flex:none; }
+.reg-actions{ display:flex; align-items:center; gap:16px; flex-wrap:wrap; }
+.reg-actions button{ border:0; cursor:pointer; font-family:inherit; }
+.reg-actions button:disabled{ opacity:.6; cursor:default; }
+.reg-status{ font-size:14px; color:var(--text-dim); }
+.reg-status.bad{ color:#c0392b; }
+.reg-alt{ font-size:13px; color:var(--text-faint); margin:0; }
+.hp{ position:absolute !important; left:-9999px; width:1px; height:1px; opacity:0; }
+.reg-done{ max-width:620px; margin:20px auto; text-align:center; }
+.reg-done[hidden], .reg-form[hidden], .fld[hidden], .fld-hint[hidden]{ display:none !important; }
+.reg-check{ width:64px; height:64px; margin:0 auto 18px; border-radius:50%; background:#e6f7ee; color:#1a9b5b; font-size:34px; display:flex; align-items:center; justify-content:center; }
+@media (max-width:620px){ .fld-row{ flex-direction:column; gap:0; } .reg-form fieldset{ padding:18px 16px 4px; } }
