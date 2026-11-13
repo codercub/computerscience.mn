@@ -1,6 +1,6 @@
 (function () {
   // Paste the Apps Script Web App URL here (see apps-script/README.md).
-  var ENDPOINT = 'https://script.google.com/macros/s/AKfycbyCijGiCyyLuGVvm45oJZDMvshhbN6r60zndLB5xOsW_NYUPOp3bGZWYSNd3mAl67_SBQ/exec';
+  var ENDPOINT = 'https://script.google.com/macros/s/AKfycbyVfuHf1wbnagCE5Off__1dAucRHlBOFsiW11IYnBSbynCqOBP9mBTjrilka2vM42Ia/exec';
   var FIELDS = ['program','first','last','gender','phone','email','school','grade','place','note','consent'];
 
   var form = document.getElementById('regForm');

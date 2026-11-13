@@ -2,6 +2,9 @@
  * Codercub registration -> Google Sheet (no Google Form involved)
  * Paste into Extensions > Apps Script of your Sheet. See README.md.
  */
+// The Sheet that receives registrations. Paste its ID here: the long text in the Sheet's
+// address between /d/ and /edit  (https://docs.google.com/spreadsheets/d/THIS_PART/edit)
+var SPREADSHEET_ID = '';
 var SHEET_NAME = 'Registrations';
 var NOTIFY_EMAIL = '';   // optional: an e-mail address to notify on each new registration
 
@@ -32,7 +35,7 @@ function doPost(e) {
   lock.waitLock(20000);
   try {
     var p = (e && e.parameter) || {};
-    var ss = SpreadsheetApp.getActiveSpreadsheet();
+    var ss = SPREADSHEET_ID ? SpreadsheetApp.openById(SPREADSHEET_ID) : SpreadsheetApp.getActiveSpreadsheet();
     var sh = ss.getSheetByName(SHEET_NAME) || ss.insertSheet(SHEET_NAME);
     if (sh.getLastRow() === 0) {
       sh.appendRow(COLUMNS.map(function (c) { return c[0]; }));
