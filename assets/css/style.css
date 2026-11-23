@@ -796,7 +796,7 @@ footer .footer-bottom{display:flex;align-items:center;justify-content:space-betw
 @media (max-width:560px){ .prog-photos--2{ grid-template-columns:1fr; } }
 
 /* active promo price card */
-.price-card.promo::before{ content:'11 САРЫН ДУУСТАЛ'; position:absolute; top:-11px; left:20px; background:var(--orange); color:#fff; font-size:10px; font-weight:700; letter-spacing:.05em; padding:3px 9px; border-radius:20px; }
+.price-card.promo::before{ content:'12-Р САРЫН 14 ХҮРТЭЛ'; position:absolute; top:-11px; left:20px; background:var(--orange); color:#fff; font-size:10px; font-weight:700; letter-spacing:.05em; padding:3px 9px; border-radius:20px; }
 .price-card.promo{ border-color:var(--orange); }
 
 /* registration page */
